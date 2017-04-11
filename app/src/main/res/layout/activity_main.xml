@@ -11,13 +11,13 @@
     tools:context="com.start.lvart.MainActivity">
 
     <TextView
-        android:text="User Name"
+        android:id="@+id/T_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="User Name" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,5 +30,26 @@
         android:id="@+id/UserName"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/T_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/UserName"
+        android:text="Password" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/T_password"
+        android:ems="10"
+        android:inputType="textPassword" />
 
 </RelativeLayout>
