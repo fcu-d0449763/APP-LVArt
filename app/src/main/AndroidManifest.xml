@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainView" />
-        <activity android:name=".VirtualActivity"></activity>
+        <activity android:name=".VirtualActivity" />
+        <activity android:name=".list"></activity>
     </application>
 
 </manifest>
