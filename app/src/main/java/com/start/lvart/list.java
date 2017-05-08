@@ -17,9 +17,9 @@ public class list extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list);
 
-        ListView listview = (ListView) findViewById(R.id.listview);
+        ListView listview = (ListView) findViewById(android.R.id.list);
 
         //android.R.layout.simple_list_item_1 為內建樣式，還有其他樣式可自行研究
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,str);
