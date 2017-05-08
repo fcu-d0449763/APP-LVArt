@@ -21,7 +21,7 @@ public class MainView extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent();
-            intent.setClass(MainView.this,VirtualActivity.class);
+            intent.setClass(MainView.this,MapsActivity.class);
             startActivity(intent);
         }
     };
