@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.start.lvart.Activity">
+
+    <Button
+        android:id="@+id/buttonBackList"
+        android:layout_width="87dp"
+        android:layout_height="46dp"
+        android:text="返回列表"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="449dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/act"
+        android:layout_width="362dp"
+        android:layout_height="440dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="9dp" />
+</android.support.constraint.ConstraintLayout>

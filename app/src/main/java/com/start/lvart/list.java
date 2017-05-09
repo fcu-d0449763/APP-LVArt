@@ -2,6 +2,7 @@ package com.start.lvart;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -36,6 +37,10 @@ public class list extends AppCompatActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             // Toast 快顯功能 第三個參數 Toast.LENGTH_SHORT 2秒  LENGTH_LONG 5秒
             Toast.makeText(list.this,"點選第 "+(position +1) +" 個 \n內容："+str[position], Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent();
+            intent.setClass(list.this,Activity.class);
+            intent.putExtra("KEY_NUMBER", position);
+            startActivity(intent);
         }
     };
 
