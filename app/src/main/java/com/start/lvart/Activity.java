@@ -83,19 +83,19 @@ public class Activity extends AppCompatActivity {
         int num = intent.getIntExtra("KEY_NUMBER", 0);
 
         String[] str = {">>活動名稱\n" + name[num]
-                        , "\n>>所在縣市\n" + loc[num]
-                        , "\n>>活動型態\n" + style[num]
-                        , "\n>>活動類別\n" + kind[num]
-                        , "\n>>活動展演者\n" + player[num]
-                        , "\n>>活動時間\n" + time[num]
-                        , "\n>>活動場地\n" + stand[num]
-                        , "\n>>場地地址\n" + address[num]
-                        , "\n>>聯絡電話\n" + phone[num]
-                        , "\n>>票價\n" + value[num]
-                        , "\n>>售票系統\n" + system[num]
-                        , "\n>>參與單位\n" + unit[num]
-                        , "\n>>活動網址\n" + web[num]
-                        , "\n>>簡介\n" + outline[num]};
+                        , ">>所在縣市\n" + loc[num]
+                        , ">>活動型態\n" + style[num]
+                        , ">>活動類別\n" + kind[num]
+                        , ">>活動展演者\n" + player[num]
+                        , ">>活動時間\n" + time[num]
+                        , ">>活動場地\n" + stand[num]
+                        , ">>場地地址\n" + address[num]
+                        , ">>聯絡電話\n" + phone[num]
+                        , ">>票價\n" + value[num]
+                        , ">>售票系統\n" + system[num]
+                        , ">>參與單位\n" + unit[num]
+                        , ">>活動網址\n" + web[num]
+                        , ">>簡介\n" + outline[num]};
 
         ListView listview = (ListView) findViewById(R.id.act);
 
