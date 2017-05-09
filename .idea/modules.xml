@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/APP-LVArtT.iml" filepath="$PROJECT_DIR$/APP-LVArtT.iml" />
       <module fileurl="file://$PROJECT_DIR$/LVArt.iml" filepath="$PROJECT_DIR$/LVArt.iml" />
       <module fileurl="file://$PROJECT_DIR$/LVArt.iml" filepath="$PROJECT_DIR$/LVArt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/starfish.iml" filepath="$PROJECT_DIR$/starfish.iml" />
     </modules>
