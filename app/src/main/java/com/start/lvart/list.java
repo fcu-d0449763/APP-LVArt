@@ -13,7 +13,11 @@ import android.widget.Toast;
 public class list extends AppCompatActivity {
 
     //ListView 要顯示的內容　改到全域變數
-    public String[] str = {"活動1","活動2","活動3","活動4","活動5"};
+    public String[] str = {"2017 焦點舞團【草根限定】"
+                            ,"看見史前臺灣：國定遺址巡禮展"
+                            ,"講座：十七歲的轉捩點"
+                            ,"臺灣青年劇團-《2017<逆風花>音樂歌舞劇》"
+                            ,"藝術亮點：紙藝X金工雕塑聯展(常態展)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

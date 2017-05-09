@@ -101,8 +101,6 @@ public class Activity extends AppCompatActivity {
 
         ArrayAdapter adapter2 = new ArrayAdapter(this,android.R.layout.simple_list_item_1,str);
         listview.setAdapter(adapter2);
-        listview.setOnClickListener(back);
-
     }
 
     private View.OnClickListener back = new View.OnClickListener() {
