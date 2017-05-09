@@ -103,12 +103,13 @@ public class Activity extends AppCompatActivity {
         listview.setAdapter(adapter2);
     }
 
-    private View.OnClickListener back = new View.OnClickListener() {
+    private Button.OnClickListener back = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent();
             intent.setClass(Activity.this,list.class);
             startActivity(intent);
+            finish();
         }
     };
 }

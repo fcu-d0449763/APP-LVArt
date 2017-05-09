@@ -45,6 +45,7 @@ public class list extends AppCompatActivity {
             intent.setClass(list.this,Activity.class);
             intent.putExtra("KEY_NUMBER", position);
             startActivity(intent);
+            finish();
         }
     };
 
