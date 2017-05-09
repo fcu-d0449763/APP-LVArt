@@ -11,7 +11,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/lvartlogo"
+        android:icon="@drawable/lvartlogo_min"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
