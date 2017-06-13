@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "630762712296",
+    "firebase_url": "https://lvart-239f1.firebaseio.com",
+    "project_id": "lvart-239f1",
+    "storage_bucket": "lvart-239f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630762712296:android:cceed660d3b29adf",
+        "android_client_info": {
+          "package_name": "com.start.lvart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630762712296-jtkerd9ihvrinu70p0cscuijluit1eru.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.start.lvart",
+            "certificate_hash": "541a0ab6063061a6498675a3962214325a318914"
+          }
+        },
+        {
+          "client_id": "630762712296-9680tomg4ke5g53svb6c7oegmsm3qcm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8pMImsUBTmLz-DNaMRVEZupSXZhmF23U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630762712296-9680tomg4ke5g53svb6c7oegmsm3qcm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
