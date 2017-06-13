@@ -12,17 +12,27 @@ public class Database {
 
     private String time; //time 活動時間
 
+    private String endTime; //endtime 活動結束時間
+
     private String locationName; //stand 活動場地
 
     private String location; //address 場地地址
 
     private String price; //value 票價
 
-    private String webSales; //web 活動網址
+    private String sourceWebName; //system 售票系統
 
-    private String sourceWebName; //sourceWebName  相關單位網頁名稱
+    private String webSales; //systemweb 售票網址
 
-    private String sourceWebPromote; //sourceWebPromote 相關單位網頁網址
+    private String masterUnit; //unit 主辦單位
+
+    private String sourceWebPromote; //web 活動網址
+
+    private String descriptionFilterHtml; //outline 簡介
+
+    private String latitude; //緯度
+
+    private String longitude; //經度
 
     public String getTitle() {
         return title;
@@ -94,5 +104,45 @@ public class Database {
 
     public void setSourceWebPromote(String sourceWebPromote) {
         this.sourceWebPromote = sourceWebPromote;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public String getMasterUnit() {
+        return masterUnit;
+    }
+
+    public void setMasterUnit(String masterUnit) {
+        this.masterUnit = masterUnit;
+    }
+
+    public String getDescriptionFilterHtml() {
+        return descriptionFilterHtml;
+    }
+
+    public void setDescriptionFilterHtml(String descriptionFilterHtml) {
+        this.descriptionFilterHtml = descriptionFilterHtml;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }
