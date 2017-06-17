@@ -13,27 +13,24 @@ import android.widget.Toast;
 public class list extends AppCompatActivity {
 
     //ListView 要顯示的內容　改到全域變數
-    public String[] str = {"音樂"
-            ,"戲劇"
-            ,"舞蹈"
-            ,"親子活動"
-            ,"演唱會"
-            ,"展覽"
-            ,"講座"
-            ,"電影"
-            ,"綜藝"
-            ,"競賽"};
+    public String[] str = {"2017 焦點舞團【草根限定】"
+                            ,"看見史前臺灣：國定遺址巡禮展"
+                            ,"講座：十七歲的轉捩點"
+                            ,"臺灣青年劇團-《2017<逆風花>音樂歌舞劇》"
+                            ,"藝術亮點：紙藝X金工雕塑聯展(常態展)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
         ListView listview = (ListView) findViewById(android.R.id.list);
 
         //android.R.layout.simple_list_item_1 為內建樣式，還有其他樣式可自行研究
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,str);
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(onClickListView);       //指定事件 Method
+
     }
 
     /***
