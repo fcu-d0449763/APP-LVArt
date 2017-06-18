@@ -145,4 +145,5 @@ public class Database {
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
+
 }

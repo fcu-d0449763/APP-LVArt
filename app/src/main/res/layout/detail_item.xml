@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_endtime"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_locationName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_sourceWebName"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_webSales"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_sourceWebPromote"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_descriptionFilterHtml"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+</LinearLayout>
