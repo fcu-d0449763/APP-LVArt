@@ -99,37 +99,85 @@ public class ActivitydetailActivity extends AppCompatActivity {
                     DataSnapshot dssourceWebPromote = ds.child("sourceWebPromote");
                     DataSnapshot dsdescriptionFilterHtml = ds.child("descriptionFilterHtml");
 
-
-
-                    String title = ">>活動名稱"+dstitle.getValue().toString();
-                    String unit = ">>表演者"+dsshowUnit.getValue().toString();
-                    String time = ">>活動時間:";//+dstime.getValue().toString();
-                    String endtime = ">>簡介";//+dsendtime.getValue().toString();
-                    String locationName = ">>活動場地";//+dslocationName.getValue().toString();
-                    String location = ">>場地地址";//+dslocation.getValue().toString();
-                    String price = ">>票價";//+dsprice.getValue().toString();
-                    String sourceWebName = ">>簡介";//+dssourceWebName.getValue().toString();
-                    String webSales = ">>售票系統";//+dswebSales.getValue().toString();
-                    String sourceWebPromote = ">>簡介";//+dssourceWebPromote.getValue().toString();
-                    String descriptionFilterHtml = ">>簡介"+dsdescriptionFilterHtml.getValue().toString();
-
-
-
                     Database db = new Database();
+
+                    String title = ">>活動名稱:"+dstitle.getValue().toString();
+
+                    if(dsshowUnit.getValue().toString() == null){
+                        String unit = ">>表演者:";
+                        db.setShowUnit(unit);
+                    }else{
+                        String unit = ">>表演者:"+dsshowUnit.getValue().toString();
+                        db.setShowUnit(unit);
+                    }
+                    if(dstime.getValue() == null){
+                        String time = ">>活動時間:";
+                        db.setTime(time);
+                    }else{
+                        String time = ">>活動時間:"+dstime.getValue().toString();
+                        db.setTime(time);
+                    }
+                    if(dsendtime.getValue() == null){
+                        String endtime = ">>活動結束時間:";
+                        db.setEndTime(endtime);
+                    }else {
+                        String endtime = ">>活動結束時間:"+dsendtime.getValue().toString();
+                        db.setEndTime(endtime);
+                    }
+                    if(dslocationName.getValue() == null){
+                        String locationName = ">>活動場地:";
+                        db.setLocationName(locationName);
+                    }else {
+                        String locationName = ">>活動場地:"+dslocationName.getValue().toString();
+                        db.setLocationName(locationName);
+                    }
+                    if(dslocation.getValue() == null){
+                        String location = ">>場地地址:";
+                        db.setLocation(location);
+                    }else {
+                        String location = ">>場地地址:"+dslocation.getValue().toString();
+                        db.setLocation(location);
+                    }
+                    if(dsprice.getValue() == null){
+                        String price = ">>票價:";
+                        db.setPrice(price);
+                    }else {
+                        String price = ">>票價:"+dsprice.getValue().toString();
+                        db.setPrice(price);
+                    }
+                    if(dssourceWebName.getValue() == null){
+                        String sourceWebName = ">>售票系統:";
+                        db.setSourceWebName(sourceWebName);
+                    }else {
+                        String sourceWebName = ">>售票系統:"+dssourceWebName.getValue().toString();
+                        db.setSourceWebName(sourceWebName);
+                    }
+                    if(dswebSales.getValue() == null){
+                        String webSales = ">>售票網址:";
+                        db.setWebSales(webSales);
+                    }else {
+                        String webSales = ">>售票網址:"+dswebSales.getValue().toString();
+                        db.setWebSales(webSales);
+                    }
+                    if(dssourceWebPromote.getValue() ==null){
+                        String sourceWebPromote = ">>活動網址:";
+                        db.setSourceWebPromote(sourceWebPromote);
+                    }else{
+                        String sourceWebPromote = ">>活動網址:"+dssourceWebPromote.getValue().toString();
+                        db.setSourceWebPromote(sourceWebPromote);
+                    }
+                    if(dsdescriptionFilterHtml.getValue() == null){
+                        String descriptionFilterHtml = ">>簡介:";
+                        db.setDescriptionFilterHtml(descriptionFilterHtml);
+                    }else {
+                        String descriptionFilterHtml = ">>簡介:"+dsdescriptionFilterHtml.getValue().toString();
+                        db.setDescriptionFilterHtml(descriptionFilterHtml);
+                    }
+
                     db.setTitle(title);
-                    db.setShowUnit(unit);
-                    db.setTime(time);
-                    db.setEndTime(endtime);
-                    db.setLocationName(locationName);
-                    db.setLocation(location);
-                    db.setPrice(price);
-                    db.setSourceWebName(sourceWebName);
-                    db.setWebSales(webSales);
-                    db.setSourceWebPromote(sourceWebPromote);
-                    db.setDescriptionFilterHtml(descriptionFilterHtml);
 
                     databases.add(db);
-                    Log.v("key", title+unit);
+                    Log.v("key", title);
                     datacount = 0;
                     break;
                 }else {
