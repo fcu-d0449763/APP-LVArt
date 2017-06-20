@@ -8,10 +8,13 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -22,6 +25,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener, GoogleMap.OnMapClickListener{
 
@@ -30,6 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Location location;
     private Marker marker, fistmarker;
     private LatLng now, reLatLng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +62,57 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
         }
         lms.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000,0,this);
+        getFiredasedata();
+    }
+
+    private void getFiredasedata(){
+        FirebaseDatabase firebaseDatabase  = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference("/0");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                new FirebaseThread(dataSnapshot).start();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.v("error",databaseError.getMessage());
+            }
+        });
+    }
+
+    class FirebaseThread extends Thread {
+        private DataSnapshot dataSnapshot;
+        public FirebaseThread(DataSnapshot dataSnapshot) {
+            this.dataSnapshot = dataSnapshot;
+        }
+        @Override
+        public void run() {
+            for(DataSnapshot ds : dataSnapshot.getChildren()){
+                DataSnapshot dstitle = ds.child("title");
+                DataSnapshot dslatitude = ds.child("showInfo/0/latitude");
+                DataSnapshot dslongitude = ds.child("showInfo/0/longitude");
+                String title = dstitle.getValue().toString();
+                String locatuon = dslatitude.getValue().toString();
+                Log.v("dfg",locatuon);
+                if(dslatitude.getValue() == null && dslongitude.getValue() == null){
+
+                }else {
+                    /*String activitylatitude = dslatitude.getValue().toString();
+                    String activitylongitude = dslongitude.getValue().toString();
+                    double latitude = Double.parseDouble(activitylatitude);
+                    double longitude = Double.parseDouble(activitylongitude);
+                    map(latitude,longitude,title);
+                    Log.v("dfg",activitylatitude+","+activitylongitude);*/
+                }
+            }
+        }
+    }
+
+    private void map(double latitude, double longitude, String title) {
+        LatLng activitylatLng = new LatLng(latitude,longitude);
+        mMap.addMarker(new MarkerOptions().position(activitylatLng).title("title:"+title+"\n"+"Lat: " + activitylatLng.latitude + " Long:" + activitylatLng.longitude));
     }
 
 

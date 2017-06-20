@@ -164,7 +164,6 @@ public class Activity extends AppCompatActivity {
             intent.putExtra("KEY_NUMBER_DETAIL", position);
             intent.putExtra("KEY_NUMBER",choose);
             startActivity(intent);
-            finish();
         }
     };
 }

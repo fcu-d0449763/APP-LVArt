@@ -89,11 +89,11 @@ public class ActivitydetailActivity extends AppCompatActivity {
                 if(datakey == datacount){
                     DataSnapshot dstitle = ds.child("title");
                     DataSnapshot dsshowUnit = ds.child("showUnit");
-                    DataSnapshot dstime = ds.child("showInfo").child("time");
-                    DataSnapshot dsendtime = ds.child("showInfo").child("endTime");
-                    DataSnapshot dslocationName = ds.child("showInfo").child("locationName");
-                    DataSnapshot dslocation = ds.child("showInfo").child("location");
-                    DataSnapshot dsprice = ds.child("showInfo").child("price");
+                    DataSnapshot dstime = ds.child("showInfo/0/time");
+                    DataSnapshot dsendtime = ds.child("showInfo/0/endTime");
+                    DataSnapshot dslocationName = ds.child("showInfo/0/locationName");
+                    DataSnapshot dslocation = ds.child("showInfo/0/location");
+                    DataSnapshot dsprice = ds.child("showInfo/0/price");
                     DataSnapshot dssourceWebName = ds.child("sourceWebName");
                     DataSnapshot dswebSales = ds.child("webSales");
                     DataSnapshot dssourceWebPromote = ds.child("sourceWebPromote");

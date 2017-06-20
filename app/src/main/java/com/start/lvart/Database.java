@@ -30,9 +30,9 @@ public class Database {
 
     private String descriptionFilterHtml; //outline 簡介
 
-    private String latitude; //緯度
+    private double latitude; //緯度
 
-    private String longitude; //經度
+    private double longitude; //經度
 
     public String getTitle() {
         return title;
@@ -130,19 +130,19 @@ public class Database {
         this.descriptionFilterHtml = descriptionFilterHtml;
     }
 
-    public String getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
